@@ -1,0 +1,44 @@
+
+
+$ git commit -m 'initial files and split files'
+[master (root-commit) af7fab7] initial files and split files
+ 26 files changed, 74 insertions(+)
+ create mode 100644 downloads/gmp-5.0.1.tar.bz2
+ create mode 100644 downloads/mpc-0.9.tar.gz
+ create mode 100644 downloads/mpfr-3.0.1.tar.xz
+ create mode 100644 downloads/sums-sha256-dec22
+ create mode 100644 list-files
+ create mode 100644 sources-extracted/binutils-2.27.tar.gz
+ create mode 100644 sources-extracted/gcc-6.2.tar.gz-split/readme-split-cmd
+ create mode 100644 sources-extracted/gcc-6.2.tar.gz-split/sums-sha256-dec24
+ create mode 100644 sources-extracted/gcc-6.2.tar.gz-split/xaa
+ create mode 100644 sources-extracted/gcc-6.2.tar.gz-split/xab
+ create mode 100644 sources-extracted/gdb-7.12.tar.gz
+ create mode 100644 sources-extracted/glibc-2.23.tar.gz
+ create mode 100644 sources-extracted/linux-4.9.tar.gz-split/readme-split-cmd
+ create mode 100644 sources-extracted/linux-4.9.tar.gz-split/sums-sha256-dec24
+ create mode 100644 sources-extracted/linux-4.9.tar.gz-split/xaa
+ create mode 100644 sources-extracted/linux-4.9.tar.gz-split/xab
+ create mode 100644 sources-extracted/newlib-2.4.tar.gz
+ create mode 100644 sources-extracted/sums-sha256-dec24
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/readme-split-cmd
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/sums-sha256-dec24
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/xaa
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/xab
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/xac
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/xad
+ create mode 100644 sources/mb-gnu-20170306.tar.gz-split/xae
+ create mode 100644 sources/sums-sha256-dec24
+
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        sources-extracted/gcc-6.2.tar.gz
+        sources-extracted/linux-4.9.tar.gz
+        sources/mb-gnu-20170306.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
