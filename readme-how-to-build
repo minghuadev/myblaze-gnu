@@ -17,7 +17,10 @@ the build scripting tool is from
       that installs all the dependant packages to a ubuntu 18.04 lts system. 
       create the directory ~/dockerblaze/sharedfolder/ to be shared 
       between the fedora host and container guest. 
-[1.4] run the commented-out command at the end of the file to create 
+[1.4] run
+          chcon -Rt svirt_sandbox_file_t $(pwd)/sharedfolder
+      to give container access to the sharedfolder/ by selinux
+[1.5] run the commented-out command at the end of the file to create 
       the ubuntu container from the image. 
       get into the container. 
 
