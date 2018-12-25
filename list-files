@@ -1,0 +1,48 @@
+
+list-files
+
+
+ls -lrt
+drwxr-xr-x       0 Dec 24 17:14 downloads/
+drwxr-xr-x       0 Dec 24 17:20 sources-extracted/
+drwxr-xr-x       0 Dec 24 17:24 sources/
+-rw-r--r--       0 Dec 24 15:25 list-files
+
+
+ls -lrt downloads/
+-rw-r--r--     1016096 Apr  4  2011 mpfr-3.0.1.tar.xz
+-rw-r--r--      565953 Nov 22 01:25 mpc-0.9.tar.gz
+-rw-r--r--     2006109 Dec 21 01:04 gmp-5.0.1.tar.bz2
+-rw-r--r--         338 Dec 23 15:31 sums-sha256-dec22
+
+
+ls -lrt sources/
+-rw-r--r--   414156800 Mar 23  2017 mb-gnu-20170306.tar.gz
+-rw-r--r--          89 Dec 24 17:24 sums-sha256-dec24
+drwxr-xr-x           0 Dec 24 17:26 mb-gnu-20170306.tar.gz-split/
+
+
+$ ls -lrt sources-extracted/
+-rw-r--r--   117995279 Mar  6  2017 gcc-6.2.tar.gz
+-rw-r--r--    52535254 Mar  6  2017 binutils-2.27.tar.gz
+-rw-r--r--    26796012 Mar  6  2017 glibc-2.23.tar.gz
+-rw-r--r--    20533660 Mar  6  2017 newlib-2.4.tar.gz
+-rw-r--r--   143976673 Mar  6  2017 linux-4.9.tar.gz
+-rw-r--r--    52315052 Mar  6  2017 gdb-7.12.tar.gz
+-rw-r--r--         501 Dec 24 17:17 sums-sha256-dec24
+drwxr-xr-x           0 Dec 24 17:27 gcc-6.2.tar.gz-split/
+drwxr-xr-x           0 Dec 24 17:28 linux-4.9.tar.gz-split/
+
+ls -lrt sources-extracted/gcc-6.2.tar.gz-split/
+-rw-r--r--    83886080 Dec 24 17:18 xaa
+-rw-r--r--    34109199 Dec 24 17:18 xab
+-rw-r--r--          30 Dec 24 17:27 readme-split-cmd
+-rw-r--r--         223 Dec 24 17:27 sums-sha256-dec24
+
+ls -lrt sources-extracted/linux-4.9.tar.gz-split/
+-rw-r--r--    83886080 Dec 24 17:20 xaa
+-rw-r--r--    60090593 Dec 24 17:20 xab
+-rw-r--r--          32 Dec 24 17:28 readme-split-cmd
+-rw-r--r--         223 Dec 24 17:28 sums-sha256-dec24
+
+
