@@ -1,0 +1,44 @@
+
+readme-how-to-build
+how to build gnu toolchain for microblaze
+
+the toolchain source is from 
+ https://www.xilinx.com/guest_resources/member/mb_gnu/mb-gnu-20170306.tar.gz 
+the build scripting tool is from
+ https://github.com/Xilinx/crosstool-ng
+
+
+[1] docker container on a fedora 29 64-bit host:
+[1.1] install and start docker. add current user to the docker group. 
+[1.2] create a top directory to keep all the related files. Let's say: 
+      ~/dockerblaze/
+[1.3] copy the configs-and-patches/docker-img-mblaze.bash to ~/dockerblaze/
+      and run it from inside the directory to create the docker image 
+      that installs all the dependant packages to a ubuntu 18.04 lts system. 
+      create the directory ~/dockerblaze/sharedfolder/ to be shared 
+      between the fedora host and container guest. 
+[1.4] run the commented-out command at the end of the file to create 
+      the ubuntu container from the image. 
+      get into the container. 
+
+[2] populate the work tree inside the container:
+[2.1] place downloads/ and sources/ under ~/sharedfolder/
+[2.1.1] from sources/mb-gnu-20170306.tar.gz-split/ run 
+            cat xaa xab xac xad xae > ../mb-gnu-20170306.tar.gz
+	to recreate the tarball of gcc 6.2 packages. 
+[2.1.2] from sources/ extract mb-gnu-20170306.tar.gz, then extract all 
+        the tarball files created inside the sources directory. 
+[2.2] clone https://github.com/Xilinx/crosstool-ng into ~/sharedfolder/crosstool-ng
+      it should be on the branch xlnx/master . 
+[2.3] copy configs-and-patches/crosstool-ng-config-b to crosstool-ng/.config
+[2.4] modify the source with 4 patches. the patches are illustrated 
+      in two notes files under configs-and-patches/ .
+
+[3] build, run under crosstool-ng: 
+            ./configure --enable-local
+	    make
+	    ./ct-ng build.1
+
+the resulting toolchain shall be under ~/sharedfolder/tool-build/ .
+
+
