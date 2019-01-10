@@ -17,6 +17,8 @@ the build scripting tool is from
       that installs all the dependant packages to a ubuntu 18.04 lts system. 
       create the directory ~/dockerblaze/sharedfolder/ to be shared 
       between the fedora host and container guest. 
+[1.3.1] note if running a fedora 29 32-bit host, replace the ubuntu image 
+        in the script by i386/ubuntu:bionic-20181204 .
 [1.4] run
           chcon -Rt svirt_sandbox_file_t $(pwd)/sharedfolder
       to give container access to the sharedfolder/ by selinux
@@ -34,6 +36,7 @@ the build scripting tool is from
 [2.2] clone https://github.com/Xilinx/crosstool-ng into ~/sharedfolder/crosstool-ng
       it should be on the branch xlnx/master . 
 [2.3] copy configs-and-patches/crosstool-ng-config-b to crosstool-ng/.config
+      or use the ...config-c that has CT_CC_GCC_USE_LTO=y
 [2.4] modify the source with 4 patches. the patches are illustrated 
       in two notes files under configs-and-patches/ .
 
